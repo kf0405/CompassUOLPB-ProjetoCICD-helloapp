@@ -34,7 +34,7 @@ jobs:
       - name: Checkout manifests repository
         uses: actions/checkout@v3
         with:
-          repository: kf0405/hello-manifests #your github user here
+          repository: kf0405/CompassUOLPB-ProjetoCICD-hellomanifests #your github user here
           ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Update image tag in deployment
