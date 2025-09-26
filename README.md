@@ -242,7 +242,7 @@ Finalmente, vamos verificar se tudo está funcionando de ponta a ponta.
 
 4.  **Resultados finais:**
     * **GitHub Actions:** Vá para a aba "Actions" do repositório `hello-app` e observe o workflow rodar.
-    * **Docker Hub:** Verifique se uma nova imagem com a tag do hash do commit foi publicada. Para esse repositório, o link se encontra![aqui](https://hub.docker.com/repository/docker/kf0405/hello-app/general).
+    * **Docker Hub:** Verifique se uma nova imagem com a tag do hash do commit foi publicada. Para esse repositório, o link se encontra [aqui](https://hub.docker.com/repository/docker/kf0405/hello-app/general).
     * **Repositório de Manifestos:** Verifique o histórico de commits do `hello-manifests` para ver a atualização feita pelo bot.
     * **ArgoCD:** Na interface do ArgoCD, veja a aplicação ficar `OutOfSync` e depois sincronizar automaticamente para a nova versão.
     * **Aplicação:** Acesse `http://localhost:8080` novamente (talvez precise reiniciar o port-forward). A nova mensagem deve aparecer, confirmando o sucesso de todo o ciclo!
