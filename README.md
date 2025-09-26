@@ -218,6 +218,7 @@ Agora, vamos dizer ao ArgoCD para monitorar nosso repositório de manifestos e m
     * **Cluster URL:** `https://kubernetes.default.svc`
     * **Namespace:** `default`
     * Clique em `CREATE`. O ArgoCD irá clonar o repositório e implantar sua aplicação. O status deve mudar para **Healthy** e **Synced**.
+    ![Sincronização ArgoCD](images/Screenshot%202025-09-26%20091514.png)
 
 ## Fase 6: Teste e Verificação
 
@@ -225,13 +226,15 @@ Finalmente, vamos verificar se tudo está funcionando de ponta a ponta.
 
 1.  **Verifique os Pods:**
     No seu terminal, rode `kubectl get pods`. Você deve ver os pods da sua aplicação com o status `Running`.
+    ![Resultado do comando kubectl get pods](images/Screenshot%202025-09-26%20091120.png)
 
 2.  **Acesse a Aplicação:**
     Use o port-forward para expor o serviço localmente:
     ```bash
     kubectl port-forward svc/hello-app-service 8080:80
     ```
-    Abra seu navegador e acesse `http://localhost:8080`. Você deve ver a mensagem: `{"message": "Hello World"}`.
+    Abra seu navegador e acesse `http://localhost:8080` ou faça uma requisição utilizando o curl. Você deve ver a mensagem: `{"message": "Hello World"}`, ou outra mensagem que você tenha colocado.  
+    ![requisição curl para localhost:8080](images/Screenshot%202025-09-26%20091310.png)
 
 3.  **Teste o Fluxo Completo:**
     * No repositório `hello-app`, edite o arquivo `main.py` e mude a mensagem para algo como `{"message": "Meu CI/CD funciona!"}`.
